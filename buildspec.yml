@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - mvn package
+      - ./mvnw clean package
       - docker build -t spring-test .
       - docker tag spring-test 643463487162.dkr.ecr.us-east-1.amazonaws.com/spring-test-aws
   post_build:
