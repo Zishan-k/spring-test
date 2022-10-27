@@ -1,4 +1,4 @@
-version: 0.2
+version: 0.1
 
 phases:
   pre_build:
@@ -9,10 +9,11 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
+      - mvn package
       - docker build -t spring-test .
-      - docker tag demo-doc-repo:latest 436174799454.dkr.ecr.us-east-1.amazonaws.com/demo-doc-repo:latest
+      - docker tag spring-test 643463487162.dkr.ecr.us-east-1.amazonaws.com/spring-test-aws
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 436174799454.dkr.ecr.us-east-1.amazonaws.com/demo-doc-repo:latest
+      - docker push 643463487162.dkr.ecr.us-east-1.amazonaws.com/spring-test-aws
