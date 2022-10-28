@@ -1,0 +1,6 @@
+[
+  {
+    "name": "spring-test-container",
+    "imageUri": "643463487162.dkr.ecr.us-east-1.amazonaws.com/spring-test-aws:latest"
+  }
+]
