@@ -11,9 +11,9 @@ phases:
       - echo Building the Docker image...
       - ./mvnw clean package
       - docker build -t spring-test .
-      - docker tag spring-test 643463487162.dkr.ecr.us-east-1.amazonaws.com/spring-test-aws
+      - docker tag spring-test 643463487162.dkr.ecr.us-east-1.amazonaws.com/spring-test-aws:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 643463487162.dkr.ecr.us-east-1.amazonaws.com/spring-test-aws
+      - docker push 643463487162.dkr.ecr.us-east-1.amazonaws.com/spring-test-aws:latest
