@@ -9,6 +9,6 @@ public class TestController {
     @GetMapping("/hello")
     public String getHello() {
         System.out.println("Request received!!");
-        return "Hello Docker new 1107";
+        return "Hello Docker 233";
     }
 }
